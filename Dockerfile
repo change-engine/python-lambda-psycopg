@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 
 FROM python:3.10 AS build
-RUN PIP_DISABLE_PIP_VERSION_CHECK=true pip wheel psycopg-c==3.0.9
+RUN PIP_DISABLE_PIP_VERSION_CHECK=true pip wheel psycopg-c
 
 FROM python:3.10-slim
 WORKDIR /usr/src/app
