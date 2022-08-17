@@ -20,5 +20,6 @@ RUN chmod +x /usr/local/bin/aws-lambda-rie /lambda-entrypoint.sh \
     && apt-get update --quiet \
     && DEBIAN_FRONTEND=noninteractive apt-get install --yes --quiet \
         libpq5 \
+        libgeos-c1v5 \
     && rm -rf /var/lib/apt/lists/* \
     && PIP_DISABLE_PIP_VERSION_CHECK=true pip --no-cache-dir install *.whl psycopg awslambdaric
