@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 
 FROM python:3.11.0 AS build
-RUN PIP_DISABLE_PIP_VERSION_CHECK=true pip wheel psycopg-c
+RUN PIP_DISABLE_PIP_VERSION_CHECK=true pip wheel psycopg-c multidict yarl frozenlist
 
 FROM python:3.11.0-slim
 WORKDIR /usr/src/app
