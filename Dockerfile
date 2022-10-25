@@ -1,9 +1,9 @@
 # syntax=docker/dockerfile:1
 
-FROM python:3.10 AS build
+FROM python:3.11.0 AS build
 RUN PIP_DISABLE_PIP_VERSION_CHECK=true pip wheel psycopg-c
 
-FROM python:3.10-slim
+FROM python:3.11.0-slim
 WORKDIR /usr/src/app
 COPY --from=build /root/.cache/pip/wheels/*/*/*/*/*.whl ./
 ADD https://github.com/aws/aws-lambda-runtime-interface-emulator/releases/latest/download/aws-lambda-rie-arm64 /usr/local/bin/aws-lambda-rie
