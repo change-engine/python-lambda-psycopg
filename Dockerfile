@@ -22,4 +22,4 @@ RUN chmod +x /usr/local/bin/aws-lambda-rie /lambda-entrypoint.sh \
         libpq5 \
         libgeos-c1v5 \
     && rm -rf /var/lib/apt/lists/* \
-    && PIP_DISABLE_PIP_VERSION_CHECK=true pip --no-cache-dir install *.whl
+    && PIP_DISABLE_PIP_VERSION_CHECK=true pip --no-cache-dir install *.whl awslambdaric
