@@ -1,2 +1,1 @@
-# python-lambda-psycopg
-Base image for our lambdas to speed deployment.
+Archiving as all upstrams have binary wheels
